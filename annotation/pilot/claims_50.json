@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "PILOT-BN-001",
+    "claim_text": "তিস্তা ব্যারেজের সবকটি জলকপাট খুলে দেওয়ায় উত্তরাঞ্চল আকস্মিক বন্যায় প্লাবিত হয়েছে।",
+    "lang": "bn",
+    "t_claim": "2026-08-10",
+    "t_event": "2026-08-09",
+    "claim_type": "factual",
+    "is_provenance": true,
+    "provenance_entity": "বাংলাদেশ পানি উন্নয়ন বোর্ড",
+    "passages": [
+      {
+        "passage_id": "DOC-BWDB-01",
+        "text": "পানি উন্নয়ন বোর্ড জানায় ভারী বর্ষণ ও উজানের পাহাড়ি ঢলে তিস্তা নদীর পানি বৃদ্ধি পাওয়ায় ব্যারেজের ৪৪টি জলকপাট খুলে রাখা হয়েছে।",
+        "url": "https://bwdb.gov.bd/bulletin-flood-082026",
+        "publisher": "BWDB Official",
+        "tier": 1,
+        "t_pub": "2026-08-09",
+        "stance": "entailment",
+        "sufficiency_score": 5
+      },
+      {
+        "passage_id": "DOC-DS-01",
+        "text": "উজানের ঢলে তিস্তা অববাহিকার চরাঞ্চল ও নিম্নাঞ্চল প্লাবিত হয়েছে বলে জানিয়েছে স্থানীয় প্রশাসন।",
+        "url": "https://thedailystar.net/news-flood-2026",
+        "publisher": "Daily Star",
+        "tier": 3,
+        "t_pub": "2026-08-10",
+        "stance": "entailment",
+        "sufficiency_score": 4
+      }
+    ],
+    "gold_verdict": "SUPPORTED",
+    "annotator_id": "ANN-01",
+    "notes": "Verified against Tier 1 official BWDB flood bulletin and independent mainstream journalism."
+  },
+  {
+    "claim_id": "PILOT-BN-002",
+    "claim_text": "বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল ঘোষণা করে নতুন ডিজাইন চালু করেছে।",
+    "lang": "bn",
+    "t_claim": "2026-09-02",
+    "t_event": "2026-09-02",
+    "claim_type": "factual",
+    "is_provenance": true,
+    "provenance_entity": "বাংলাদেশ ব্যাংক",
+    "passages": [
+      {
+        "passage_id": "DOC-BB-01",
+        "text": "বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল সংক্রান্ত কোনো বিজ্ঞপ্তি জারি করেনি। এটি সম্পূর্ণ গুজব ও বিভ্রান্তিকর।",
+        "url": "https://bb.org.bd/press-release-rumor-500",
+        "publisher": "Bangladesh Bank Official",
+        "tier": 1,
+        "t_pub": "2026-09-02",
+        "stance": "contradiction",
+        "sufficiency_score": 5
+      }
+    ],
+    "gold_verdict": "REFUTED",
+    "annotator_id": "ANN-01",
+    "notes": "Official press release clearly refutes the viral social media rumor."
+  }
+]
