@@ -1,8 +1,8 @@
 """
 src/pipeline.py
 Master Pipeline Orchestrator for BiN (Audit-Then-Believe).
-Sequentially coordinates Stages 1 through 8 into an auditable verification workflow.
-Fully integrates provenance registry absence detection and calibrated stance ingestion.
+Coordinates Stages 1 through 8 into an auditable verification workflow.
+Integrates live Apple Silicon MPS Multilingual-E5 + Bengali BM25 Hybrid Retrieval.
 """
 
 from typing import Dict, Any, Optional, Tuple, List
@@ -19,7 +19,7 @@ from src.contracts import (
 )
 from src.ingest.loader import load_claim_text
 from src.claims.processor import deconstruct_claim
-from src.retrieval.fusion import fuse_and_rank_evidence
+from src.retrieval.hybrid_engine import BengaliHybridRetriever
 from src.audit.clustering import count_independent_publishers, filter_temporal_leakage
 from src.analysis.stance import analyze_passage_stance
 from src.verdict.aggregator import aggregate_verdict
@@ -32,8 +32,9 @@ class BiNPipeline:
     End-to-end evidence-calibrated fact verification pipeline.
     """
 
-    def __init__(self, tau_abstain: float = 0.65):
+    def __init__(self, tau_abstain: float = 0.60):
         self.tau_abstain = tau_abstain
+        self.hybrid_retriever = BengaliHybridRetriever()
 
     def run_pipeline(
         self,
@@ -66,14 +67,11 @@ class BiNPipeline:
                 "verdict": None
             }
 
-        # Stage 3: Hybrid Retrieval Simulation / Ranking
-        candidate_ids = list(evidence_pool.keys())
-        retrieved_items = fuse_and_rank_evidence(
-            raw_passages=evidence_pool,
-            bm25_ids=candidate_ids,
-            dense_ids=candidate_ids,
-            pass_type="hybrid_fusion",
-            top_k=len(candidate_ids)
+        # Stage 3: Live Dual-Stream Hybrid Retrieval (MPS E5 + BM25 RRF)
+        retrieved_items = self.hybrid_retriever.retrieve(
+            query=primary_claim.text,
+            corpus=evidence_pool,
+            top_k=len(evidence_pool) if evidence_pool else 5
         )
 
         # Stage 4: Deduplication & Temporal Leakage Filter
@@ -89,7 +87,6 @@ class BiNPipeline:
         # Absence audit for provenance verification
         absence_status: AbsenceStatus = "unknown"
         if primary_claim.is_provenance:
-            # If official registry (Tier 1) confirms no official release was made
             for item in eligible_items:
                 raw_item_data = evidence_pool.get(item.passage_id, {})
                 if item.tier == 1 and raw_item_data.get("stance") == "neutral":
