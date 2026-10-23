@@ -1,4 +1,4 @@
-# BiN: Evidence-Calibrated Multimodal Fact Verification with Audit Gates
+# BiN_Audit_Then_Believe: Evidence-Calibrated Multimodal Fact Verification with Audit Gates
 
 **Department of Computer Science and Engineering | Jahangirnagar University**  
 Master of Science in Computer Science & Engineering (PMCS Program, Batch 42)
