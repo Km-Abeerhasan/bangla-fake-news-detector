@@ -2,7 +2,8 @@
 src/pipeline.py
 Master Pipeline Orchestrator for BiN (Audit-Then-Believe).
 Coordinates Stages 1 through 8 into an auditable verification workflow.
-Integrates live Apple Silicon MPS Multilingual-E5 + Bengali BM25 Hybrid Retrieval.
+Integrates live Apple Silicon MPS Multilingual-E5 + Bengali BM25 Hybrid Retrieval
+and IndicXNLI Stance Classification.
 """
 
 from typing import Dict, Any, Optional, Tuple, List
@@ -20,6 +21,7 @@ from src.contracts import (
 from src.ingest.loader import load_claim_text
 from src.claims.processor import deconstruct_claim
 from src.retrieval.hybrid_engine import BengaliHybridRetriever
+from src.models.stance_classifier import IndicXNLIClassifier
 from src.audit.clustering import count_independent_publishers, filter_temporal_leakage
 from src.analysis.stance import analyze_passage_stance
 from src.verdict.aggregator import aggregate_verdict
@@ -35,6 +37,7 @@ class BiNPipeline:
     def __init__(self, tau_abstain: float = 0.60):
         self.tau_abstain = tau_abstain
         self.hybrid_retriever = BengaliHybridRetriever()
+        self.stance_classifier = IndicXNLIClassifier(use_fallback=True)
 
     def run_pipeline(
         self,
@@ -93,7 +96,7 @@ class BiNPipeline:
                     absence_status = "confirmed_within_scope"
                     break
 
-        # Stage 5: Calibrated Stance Analysis
+        # Stage 5: Live Calibrated Stance Analysis (IndicXNLI on MPS)
         stances: List[StanceResult] = []
         for item in eligible_items:
             raw_item_data = evidence_pool.get(item.passage_id, {})
@@ -106,7 +109,11 @@ class BiNPipeline:
             elif annotated_stance == "neutral":
                 logits = [-1.0, 3.2, -1.0]
             else:
-                logits = [2.8, -0.5, -1.5]
+                # Live inference via IndicXNLI wrapper
+                logits = self.stance_classifier.predict_logits(
+                    premise=item.text,
+                    hypothesis=primary_claim.text
+                )
 
             stance = analyze_passage_stance(
                 claim=primary_claim,
