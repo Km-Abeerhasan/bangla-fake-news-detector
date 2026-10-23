@@ -1,0 +1,34 @@
+{
+  "dataset": "annotation/pilot/claims_50.json",
+  "total_units": 5,
+  "cohens_kappa": 1.0,
+  "krippendorff_alpha": 1.0,
+  "interpretation": "Substantial / Perfect Agreement",
+  "units": [
+    {
+      "claim_id": "PILOT-BN-001",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "PILOT-BN-002",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "PILOT-BN-003",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "PILOT-BN-004",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "PILOT-BN-005",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    }
+  ]
+}
