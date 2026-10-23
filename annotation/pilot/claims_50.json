@@ -58,5 +58,78 @@
     "gold_verdict": "REFUTED",
     "annotator_id": "ANN-01",
     "notes": "Official press release clearly refutes the viral social media rumor."
+  },
+  {
+    "claim_id": "PILOT-BN-003",
+    "claim_text": "মহামারী আকারে নতুন ভাইরাস ছড়িয়ে পড়ার সতর্কবার্তা জারি করেছে স্বাস্থ্য অধিদপ্তর।",
+    "lang": "bn",
+    "t_claim": "2026-09-15",
+    "t_event": "2026-09-15",
+    "claim_type": "factual",
+    "is_provenance": true,
+    "provenance_entity": "স্বাস্থ্য অধিদপ্তর",
+    "passages": [
+      {
+        "passage_id": "DOC-DGHS-01",
+        "text": "স্বাস্থ্য অধিদপ্তরের ওয়েবসাইটে নতুন কোনো মহামারী সতর্কবার্তা প্রকাশিত হয়নি। ভুয়া ফেসবুক পোস্টের মাধ্যমে অপপ্রচার চলছে।",
+        "url": "https://dghs.gov.bd/notice-archive-2026",
+        "publisher": "DGHS Official",
+        "tier": 1,
+        "t_pub": "2026-09-15",
+        "stance": "neutral",
+        "sufficiency_score": 4
+      }
+    ],
+    "gold_verdict": "MISLEADING",
+    "annotator_id": "ANN-01",
+    "notes": "Fabricated official attribution detected via provenance registry audit."
+  },
+  {
+    "claim_id": "PILOT-BN-004",
+    "claim_text": "চলতি মৌসুমে ইলিশ রপ্তানি পুরোপুরি বন্ধের চূড়ান্ত সিদ্ধান্ত নিয়েছে বাণিজ্য মন্ত্রণালয়।",
+    "lang": "bn",
+    "t_claim": "2026-09-20",
+    "t_event": "2026-09-20",
+    "claim_type": "factual",
+    "is_provenance": true,
+    "provenance_entity": "বাণিজ্য মন্ত্রণালয়",
+    "passages": [
+      {
+        "passage_id": "DOC-PA-04",
+        "text": "বাণিজ্য উপদেষ্টা জানিয়েছেন দেশের বাজারের চাহিদা মেটাতে ইলিশ রপ্তানি বন্ধ রাখার নীতিগত সিদ্ধান্ত বহাল রয়েছে।",
+        "url": "https://prothomalo.com/economy-hilsa-ban",
+        "publisher": "Prothom Alo",
+        "tier": 3,
+        "t_pub": "2026-09-20",
+        "stance": "entailment",
+        "sufficiency_score": 4
+      },
+      {
+        "passage_id": "DOC-TBS-04",
+        "text": "বিশেষ শর্তে সীমিত আকারে ভারতে ইলিশ রপ্তানির অনুমতি দেওয়ার কথা পুনর্ব্যক্ত করেছে মন্ত্রণালয়।",
+        "url": "https://tbsnews.net/bangladesh-hilsa-export-permit",
+        "publisher": "The Business Standard",
+        "tier": 3,
+        "t_pub": "2026-09-20",
+        "stance": "contradiction",
+        "sufficiency_score": 4
+      }
+    ],
+    "gold_verdict": "CONFLICTING",
+    "annotator_id": "ANN-01",
+    "notes": "Direct factual conflict between major authoritative media reports."
+  },
+  {
+    "claim_id": "PILOT-BN-005",
+    "claim_text": "সুন্দরবনের গভীরে প্রাচীন রাজপ্রাসাদের সন্ধান পাওয়ার দাবি করেছেন স্থানীয় কাঠুরেরা।",
+    "lang": "bn",
+    "t_claim": "2026-09-25",
+    "t_event": "2026-09-25",
+    "claim_type": "factual",
+    "is_provenance": false,
+    "passages": [],
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "annotator_id": "ANN-01",
+    "notes": "Unverified rumor without corroborating empirical evidence or reliable citations."
   }
 ]

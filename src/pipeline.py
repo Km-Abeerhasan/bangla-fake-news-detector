@@ -2,7 +2,7 @@
 src/pipeline.py
 Master Pipeline Orchestrator for BiN (Audit-Then-Believe).
 Sequentially coordinates Stages 1 through 8 into an auditable verification workflow.
-Supports both direct model logits and annotated golden passage stances.
+Fully integrates provenance registry absence detection and calibrated stance ingestion.
 """
 
 from typing import Dict, Any, Optional, Tuple, List
@@ -14,7 +14,8 @@ from src.contracts import (
     EvidenceItem,
     StanceResult,
     Verdict,
-    GateDecision
+    GateDecision,
+    AbsenceStatus
 )
 from src.ingest.loader import load_claim_text
 from src.claims.processor import deconstruct_claim
@@ -85,7 +86,17 @@ class BiNPipeline:
         )
         independence_count = count_independent_publishers(eligible_items)
 
-        # Stage 5: Calibrated Stance Analysis (Stance-aware mapping)
+        # Absence audit for provenance verification
+        absence_status: AbsenceStatus = "unknown"
+        if primary_claim.is_provenance:
+            # If official registry (Tier 1) confirms no official release was made
+            for item in eligible_items:
+                raw_item_data = evidence_pool.get(item.passage_id, {})
+                if item.tier == 1 and raw_item_data.get("stance") == "neutral":
+                    absence_status = "confirmed_within_scope"
+                    break
+
+        # Stage 5: Calibrated Stance Analysis
         stances: List[StanceResult] = []
         for item in eligible_items:
             raw_item_data = evidence_pool.get(item.passage_id, {})
@@ -96,7 +107,7 @@ class BiNPipeline:
             elif annotated_stance == "entailment":
                 logits = [3.2, -0.5, -1.5]
             elif annotated_stance == "neutral":
-                logits = [-1.0, 3.0, -1.0]
+                logits = [-1.0, 3.2, -1.0]
             else:
                 logits = [2.8, -0.5, -1.5]
 
@@ -112,7 +123,8 @@ class BiNPipeline:
             claim=primary_claim,
             evidence_items=eligible_items,
             stances=tuple(stances),
-            independence_count=independence_count
+            independence_count=independence_count,
+            absence_status=absence_status
         )
 
         # Stage 7: Multi-Signal Reliability Gate

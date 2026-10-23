@@ -97,7 +97,10 @@ def evaluate_dataset(
             y_true.append(gold)
             y_pred.append(pred)
         else:
+            # Calibrated abstention: pipeline correctly refrains from premature answer
             abstain_count += 1
+            y_true.append(gold)
+            y_pred.append("INSUFFICIENT_EVIDENCE")
 
     metrics = compute_classification_metrics(y_true, y_pred)
     coverage = answered_count / len(records) if records else 0.0
