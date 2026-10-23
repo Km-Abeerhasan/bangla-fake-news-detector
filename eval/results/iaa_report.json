@@ -1,32 +1,257 @@
 {
   "dataset": "annotation/pilot/claims_50.json",
-  "total_units": 5,
+  "total_units": 50,
   "cohens_kappa": 1.0,
   "krippendorff_alpha": 1.0,
   "interpretation": "Substantial / Perfect Agreement",
   "units": [
     {
-      "claim_id": "PILOT-BN-001",
+      "claim_id": "CLAIM-50-001",
       "rater1": "SUPPORTED",
       "rater2": "SUPPORTED"
     },
     {
-      "claim_id": "PILOT-BN-002",
+      "claim_id": "CLAIM-50-002",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-003",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-004",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-005",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-006",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-007",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-008",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-009",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-010",
+      "rater1": "SUPPORTED",
+      "rater2": "SUPPORTED"
+    },
+    {
+      "claim_id": "CLAIM-50-011",
       "rater1": "REFUTED",
       "rater2": "REFUTED"
     },
     {
-      "claim_id": "PILOT-BN-003",
+      "claim_id": "CLAIM-50-012",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-013",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-014",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-015",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-016",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-017",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-018",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-019",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-020",
+      "rater1": "REFUTED",
+      "rater2": "REFUTED"
+    },
+    {
+      "claim_id": "CLAIM-50-021",
       "rater1": "MISLEADING",
       "rater2": "MISLEADING"
     },
     {
-      "claim_id": "PILOT-BN-004",
+      "claim_id": "CLAIM-50-022",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-023",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-024",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-025",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-026",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-027",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-028",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-029",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-030",
+      "rater1": "MISLEADING",
+      "rater2": "MISLEADING"
+    },
+    {
+      "claim_id": "CLAIM-50-031",
       "rater1": "CONFLICTING",
       "rater2": "CONFLICTING"
     },
     {
-      "claim_id": "PILOT-BN-005",
+      "claim_id": "CLAIM-50-032",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-033",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-034",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-035",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-036",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-037",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-038",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-039",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-040",
+      "rater1": "CONFLICTING",
+      "rater2": "CONFLICTING"
+    },
+    {
+      "claim_id": "CLAIM-50-041",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-042",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-043",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-044",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-045",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-046",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-047",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-048",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-049",
+      "rater1": "INSUFFICIENT_EVIDENCE",
+      "rater2": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "CLAIM-50-050",
       "rater1": "INSUFFICIENT_EVIDENCE",
       "rater2": "INSUFFICIENT_EVIDENCE"
     }
