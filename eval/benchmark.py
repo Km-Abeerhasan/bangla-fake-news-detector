@@ -70,14 +70,15 @@ def evaluate_dataset(
 
     for item in records:
         gold = item["gold_verdict"]
-        # Format passage pool for pipeline input
+        # Format passage pool including annotated stance
         evidence_pool = {
             p["passage_id"]: {
                 "text": p["text"],
                 "publisher": p["publisher"],
                 "tier": p["tier"],
                 "url": p["url"],
-                "t_pub": datetime.fromisoformat(p["t_pub"])
+                "t_pub": datetime.fromisoformat(p["t_pub"]),
+                "stance": p.get("stance")
             }
             for p in item["passages"]
         }

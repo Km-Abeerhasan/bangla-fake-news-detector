@@ -1,7 +1,7 @@
 """
 src/verdict/aggregator.py
 Stage 6: Deterministic Verdict Decision Aggregator.
-Implements the 9-priority deterministic decision table, logging rule_fired and citation chains.
+Implements the deterministic decision tree with official Tier 1 denial support.
 """
 
 from typing import Tuple, List, Optional
@@ -29,10 +29,13 @@ def aggregate_verdict(
     has_numeric_mismatch: bool = False
 ) -> Verdict:
     """
-    Evaluates evidence through the deterministic 9-priority decision tree.
+    Evaluates evidence through the deterministic decision tree.
     """
     supporting_ids: List[str] = []
     contradicting_ids: List[str] = []
+
+    # Map passage tiers for quick lookup
+    tier_map = {item.passage_id: item.tier for item in evidence_items}
 
     for s in stances:
         if s.p_entail >= 0.70:
@@ -42,7 +45,6 @@ def aggregate_verdict(
 
     n_sup = len(supporting_ids)
     n_contra = len(contradicting_ids)
-    secondary_flags: List[str] = []
 
     # Priority 1: Provenance claim missing from official registry
     if claim.is_provenance and absence_status == "confirmed_within_scope":
@@ -112,7 +114,7 @@ def aggregate_verdict(
             secondary_flags=()
         )
 
-    # Priority 4: Independent Contradiction
+    # Priority 4A: Independent Multi-Source Contradiction
     if n_contra >= 2 and independence_count >= 2:
         return Verdict(
             label="REFUTED",
@@ -124,6 +126,24 @@ def aggregate_verdict(
             t_evaluation=datetime.now(),
             verification_mode=mode,
             rule_fired="RULE_4_INDEPENDENT_CONTRADICTION",
+            independence_count=independence_count,
+            citation_chains=tuple(contradicting_ids),
+            secondary_flags=()
+        )
+
+    # Priority 4B: Official Authority (Tier 1) Direct Refutation / Denial
+    has_tier1_contra = any(tier_map.get(pid) == 1 for pid in contradicting_ids)
+    if n_contra >= 1 and has_tier1_contra:
+        return Verdict(
+            label="REFUTED",
+            pipeline_status="ANSWER",
+            calibrated_conf=0.95,
+            absence_status=absence_status,
+            supporting_ids=(),
+            contradicting_ids=tuple(contradicting_ids),
+            t_evaluation=datetime.now(),
+            verification_mode=mode,
+            rule_fired="RULE_4B_OFFICIAL_DENIAL",
             independence_count=independence_count,
             citation_chains=tuple(contradicting_ids),
             secondary_flags=()
