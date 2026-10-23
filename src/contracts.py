@@ -1,5 +1,5 @@
 """
-X-MiND: Typed Data Contracts (v21)
+BiN: Typed Data Contracts (v21)
 Immutable, frozen dataclasses defining stage interfaces across S1-S8.
 Repository: bin-audit-then-believe
 """
