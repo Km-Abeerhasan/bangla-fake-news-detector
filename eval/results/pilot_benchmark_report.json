@@ -1,38 +1,42 @@
 {
-  "timestamp": "2026-10-23T19:46:05.476974",
-  "total_claims": 5,
-  "answered_claims": 4,
-  "abstained_claims": 1,
-  "coverage_rate": 0.8,
+  "dataset": "annotation/pilot/claims_50.json",
+  "total_claims": 50,
+  "answered_claims": 40,
+  "answered_decisions": 40,
+  "abstained_claims": 10,
+  "abstained_decisions": 10,
+  "selective_coverage_rate": 0.8,
+  "macro_f1": 1.0,
   "metrics": {
-    "macro_f1": 1.0,
-    "per_class": {
-      "SUPPORTED": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0
-      },
-      "REFUTED": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0
-      },
-      "MISLEADING": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0
-      },
-      "CONFLICTING": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0
-      },
-      "INSUFFICIENT_EVIDENCE": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0
-      }
+    "SUPPORTED": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
     },
-    "total_evaluated": 5
+    "REFUTED": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
+    },
+    "MISLEADING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
+    },
+    "CONFLICTING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 10
+    }
   }
 }

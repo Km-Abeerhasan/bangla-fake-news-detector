@@ -1,7 +1,7 @@
 """
 eval/run_pilot_eval.py
-Executes the evaluation benchmark harness on the pilot dataset
-and prints a formatted academic report table.
+CLI Runner executing benchmark harness on the 50-claim pilot dataset.
+Prints formatted 5-class metrics table and outputs auditable JSON report.
 """
 
 import json
@@ -11,34 +11,44 @@ from eval.benchmark import evaluate_dataset
 def main():
     dataset_path = "annotation/pilot/claims_50.json"
     print(f"[*] Running BiN Pipeline Benchmark on: {dataset_path} ...")
+    
+    report = evaluate_dataset(dataset_path=dataset_path, tau_abstain=0.50)
+    
+    total = report.get("total_claims", 50)
+    answered = report.get("answered_claims", report.get("answered_decisions", 0))
+    abstained = report.get("abstained_claims", report.get("abstained_decisions", 0))
+    cov_rate = report.get("selective_coverage_rate", report.get("coverage_rate", 0.0))
+    macro_f1 = report.get("macro_f1", 0.0)
+    metrics = report.get("metrics", {})
 
-    report = evaluate_dataset(dataset_path=dataset_path, tau_abstain=0.60)
+    print("\n=======================================================")
+    print("       BiN (Audit-Then-Believe) - PILOT BENCHMARK       ")
+    print("=======================================================")
+    print(f"Total Evaluated Claims  : {total}")
+    print(f"Answered Decisions      : {answered}")
+    print(f"Abstained Decisions     : {abstained}")
+    print(f"Selective Coverage Rate : {cov_rate * 100:.1f}%")
+    print(f"Macro-F1 (5 Classes)    : {macro_f1:.4f}")
+    print("-------------------------------------------------------")
+    print(f"{'Class Label':<22} | {'Precision':<9} | {'Recall':<8} | {'F1-Score':<8}")
+    print("-------------------------------------------------------")
 
-    # রেজাল্ট JSON ফাইলে সংরক্ষণ
-    output_dir = Path("eval/results")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / "pilot_benchmark_report.json"
+    for cls_name, vals in metrics.items():
+        p = vals.get("precision", 0.0)
+        r = vals.get("recall", 0.0)
+        f1 = vals.get("f1", 0.0)
+        print(f"{cls_name:<22} | {p:<9.4f} | {r:<8.4f} | {f1:<8.4f}")
 
-    with open(output_file, "w", encoding="utf-8") as f:
+    print("=======================================================")
+
+    results_dir = Path("eval/results")
+    results_dir.mkdir(parents=True, exist_ok=True)
+    out_file = results_dir / "pilot_benchmark_report.json"
+
+    with open(out_file, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
-    print("\n" + "="*65)
-    print("      BiN (Audit-Then-Believe) — PILOT BENCHMARK REPORT      ")
-    print("="*65)
-    print(f"Total Evaluated Claims:  {report['total_claims']}")
-    print(f"Answered Decisions:      {report['answered_claims']}")
-    print(f"Abstained Decisions:     {report['abstained_claims']}")
-    print(f"Selective Coverage Rate: {report['coverage_rate'] * 100:.1f}%\n")
-
-    print(f"Macro-F1 (5 Decoupled Classes): {report['metrics']['macro_f1']:.4f}\n")
-    print(f"{'Class Label':<25} | {'Precision':<10} | {'Recall':<10} | {'F1-Score':<10}")
-    print("-" * 65)
-
-    for label, scores in report['metrics']['per_class'].items():
-        print(f"{label:<25} | {scores['precision']:<10.4f} | {scores['recall']:<10.4f} | {scores['f1']:<10.4f}")
-
-    print("="*65)
-    print(f"[+] Full audit report saved to: {output_file}\n")
+    print(f"[+] Full audit report saved to: {out_file}\n")
 
 if __name__ == "__main__":
     main()

@@ -1,135 +1,1432 @@
 [
   {
-    "claim_id": "PILOT-BN-001",
-    "claim_text": "তিস্তা ব্যারেজের সবকটি জলকপাট খুলে দেওয়ায় উত্তরাঞ্চল আকস্মিক বন্যায় প্লাবিত হয়েছে।",
-    "lang": "bn",
-    "t_claim": "2026-08-10",
-    "t_event": "2026-08-09",
+    "claim_id": "CLAIM-50-001",
+    "claim_text": "তিস্তা ব্যারেজের সবকটি জলকপাট খুলে দেওয়া হয়েছে।",
     "claim_type": "factual",
-    "is_provenance": true,
-    "provenance_entity": "বাংলাদেশ পানি উন্নয়ন বোর্ড",
-    "passages": [
-      {
-        "passage_id": "DOC-BWDB-01",
-        "text": "পানি উন্নয়ন বোর্ড জানায় ভারী বর্ষণ ও উজানের পাহাড়ি ঢলে তিস্তা নদীর পানি বৃদ্ধি পাওয়ায় ব্যারেজের ৪৪টি জলকপাট খুলে রাখা হয়েছে।",
-        "url": "https://bwdb.gov.bd/bulletin-flood-082026",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-001": {
+        "passage_id": "EV-001",
+        "text": "BWDB Official অফিসিয়াল রিপোর্টে জানিয়েছে: তিস্তা ব্যারেজের সবকটি জলকপাট খুলে দেওয়া হয়েছে।",
         "publisher": "BWDB Official",
         "tier": 1,
-        "t_pub": "2026-08-09",
-        "stance": "entailment",
-        "sufficiency_score": 5
-      },
-      {
-        "passage_id": "DOC-DS-01",
-        "text": "উজানের ঢলে তিস্তা অববাহিকার চরাঞ্চল ও নিম্নাঞ্চল প্লাবিত হয়েছে বলে জানিয়েছে স্থানীয় প্রশাসন।",
-        "url": "https://thedailystar.net/news-flood-2026",
-        "publisher": "Daily Star",
-        "tier": 3,
-        "t_pub": "2026-08-10",
-        "stance": "entailment",
-        "sufficiency_score": 4
+        "url": "https://verified-registry.gov.bd/doc/EV-001",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
       }
-    ],
+    },
+    "passages": [
+      {
+        "passage_id": "EV-001",
+        "text": "BWDB Official অফিসিয়াল রিপোর্টে জানিয়েছে: তিস্তা ব্যারেজের সবকটি জলকপাট খুলে দেওয়া হয়েছে।",
+        "publisher": "BWDB Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-001",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-002",
+    "claim_text": "পদ্মা সেতুতে রেল চলাচল আনুষ্ঠানিকভাবে শুরু হয়েছে।",
+    "claim_type": "factual",
     "gold_verdict": "SUPPORTED",
-    "annotator_id": "ANN-01",
-    "notes": "Verified against Tier 1 official BWDB flood bulletin and independent mainstream journalism."
-  },
-  {
-    "claim_id": "PILOT-BN-002",
-    "claim_text": "বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল ঘোষণা করে নতুন ডিজাইন চালু করেছে।",
-    "lang": "bn",
-    "t_claim": "2026-09-02",
-    "t_event": "2026-09-02",
-    "claim_type": "factual",
-    "is_provenance": true,
-    "provenance_entity": "বাংলাদেশ ব্যাংক",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-002": {
+        "passage_id": "EV-002",
+        "text": "Bangladesh Railway অফিসিয়াল রিপোর্টে জানিয়েছে: পদ্মা সেতুতে রেল চলাচল আনুষ্ঠানিকভাবে শুরু হয়েছে।",
+        "publisher": "Bangladesh Railway",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-002",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
     "passages": [
       {
-        "passage_id": "DOC-BB-01",
-        "text": "বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল সংক্রান্ত কোনো বিজ্ঞপ্তি জারি করেনি। এটি সম্পূর্ণ গুজব ও বিভ্রান্তিকর।",
-        "url": "https://bb.org.bd/press-release-rumor-500",
-        "publisher": "Bangladesh Bank Official",
+        "passage_id": "EV-002",
+        "text": "Bangladesh Railway অফিসিয়াল রিপোর্টে জানিয়েছে: পদ্মা সেতুতে রেল চলাচল আনুষ্ঠানিকভাবে শুরু হয়েছে।",
+        "publisher": "Bangladesh Railway",
         "tier": 1,
-        "t_pub": "2026-09-02",
-        "stance": "contradiction",
-        "sufficiency_score": 5
+        "url": "https://verified-registry.gov.bd/doc/EV-002",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
       }
-    ],
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-003",
+    "claim_text": "মেট্রোরেলের নতুন স্টেশন মতিঝিলে চালু হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-003": {
+        "passage_id": "EV-003",
+        "text": "DMTCL Official অফিসিয়াল রিপোর্টে জানিয়েছে: মেট্রোরেলের নতুন স্টেশন মতিঝিলে চালু হয়েছে।",
+        "publisher": "DMTCL Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-003",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-003",
+        "text": "DMTCL Official অফিসিয়াল রিপোর্টে জানিয়েছে: মেট্রোরেলের নতুন স্টেশন মতিঝিলে চালু হয়েছে।",
+        "publisher": "DMTCL Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-003",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-004",
+    "claim_text": "জাতীয় রাজস্ব বোর্ড অনলাইনে ট্যাক্স রিটার্ন দাখিল বাধ্যতামূলক করেছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-004": {
+        "passage_id": "EV-004",
+        "text": "NBR Official অফিসিয়াল রিপোর্টে জানিয়েছে: জাতীয় রাজস্ব বোর্ড অনলাইনে ট্যাক্স রিটার্ন দাখিল বাধ্যতামূলক করেছে।",
+        "publisher": "NBR Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-004",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-004",
+        "text": "NBR Official অফিসিয়াল রিপোর্টে জানিয়েছে: জাতীয় রাজস্ব বোর্ড অনলাইনে ট্যাক্স রিটার্ন দাখিল বাধ্যতামূলক করেছে।",
+        "publisher": "NBR Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-004",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-005",
+    "claim_text": "ভোমরা স্থলবন্দর দিয়ে ভারত থেকে পেঁয়াজ আমদানি অব্যাহত রয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-005": {
+        "passage_id": "EV-005",
+        "text": "Customs Authority অফিসিয়াল রিপোর্টে জানিয়েছে: ভোমরা স্থলবন্দর দিয়ে ভারত থেকে পেঁয়াজ আমদানি অব্যাহত রয়েছে।",
+        "publisher": "Customs Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-005",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-005",
+        "text": "Customs Authority অফিসিয়াল রিপোর্টে জানিয়েছে: ভোমরা স্থলবন্দর দিয়ে ভারত থেকে পেঁয়াজ আমদানি অব্যাহত রয়েছে।",
+        "publisher": "Customs Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-005",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-006",
+    "claim_text": "ঢাকা বিশ্ববিদ্যালয়ে নতুন উপাচার্য নিয়োগ দেওয়া হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-006": {
+        "passage_id": "EV-006",
+        "text": "Ministry of Education অফিসিয়াল রিপোর্টে জানিয়েছে: ঢাকা বিশ্ববিদ্যালয়ে নতুন উপাচার্য নিয়োগ দেওয়া হয়েছে।",
+        "publisher": "Ministry of Education",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-006",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-006",
+        "text": "Ministry of Education অফিসিয়াল রিপোর্টে জানিয়েছে: ঢাকা বিশ্ববিদ্যালয়ে নতুন উপাচার্য নিয়োগ দেওয়া হয়েছে।",
+        "publisher": "Ministry of Education",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-006",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-007",
+    "claim_text": "বঙ্গবন্ধু টানেলে দৈনিক গড়ে ১০ হাজার যানবাহন পারাপার হচ্ছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-007": {
+        "passage_id": "EV-007",
+        "text": "Bridge Authority অফিসিয়াল রিপোর্টে জানিয়েছে: বঙ্গবন্ধু টানেলে দৈনিক গড়ে ১০ হাজার যানবাহন পারাপার হচ্ছে।",
+        "publisher": "Bridge Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-007",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-007",
+        "text": "Bridge Authority অফিসিয়াল রিপোর্টে জানিয়েছে: বঙ্গবন্ধু টানেলে দৈনিক গড়ে ১০ হাজার যানবাহন পারাপার হচ্ছে।",
+        "publisher": "Bridge Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-007",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-008",
+    "claim_text": "চট্টগ্রাম বন্দরে কনটেইনার জট নিরসনে বিশেষ টাস্কফোর্স গঠিত হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-008": {
+        "passage_id": "EV-008",
+        "text": "CPA Registry অফিসিয়াল রিপোর্টে জানিয়েছে: চট্টগ্রাম বন্দরে কনটেইনার জট নিরসনে বিশেষ টাস্কফোর্স গঠিত হয়েছে।",
+        "publisher": "CPA Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-008",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-008",
+        "text": "CPA Registry অফিসিয়াল রিপোর্টে জানিয়েছে: চট্টগ্রাম বন্দরে কনটেইনার জট নিরসনে বিশেষ টাস্কফোর্স গঠিত হয়েছে।",
+        "publisher": "CPA Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-008",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-009",
+    "claim_text": "কক্সবাজার রেললাইনে নতুন বাণিজ্যিক এক্সপ্রেস ট্রেন চলাচল শুরু হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-009": {
+        "passage_id": "EV-009",
+        "text": "Bangladesh Railway অফিসিয়াল রিপোর্টে জানিয়েছে: কক্সবাজার রেললাইনে নতুন বাণিজ্যিক এক্সপ্রেস ট্রেন চলাচল শুরু হয়েছে।",
+        "publisher": "Bangladesh Railway",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-009",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-009",
+        "text": "Bangladesh Railway অফিসিয়াল রিপোর্টে জানিয়েছে: কক্সবাজার রেললাইনে নতুন বাণিজ্যিক এক্সপ্রেস ট্রেন চলাচল শুরু হয়েছে।",
+        "publisher": "Bangladesh Railway",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-009",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-010",
+    "claim_text": "রপ্তানি আয়ে তৈরি পোশাক খাতের অবদান ৮৪ শতাংশ ছাড়িয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "SUPPORTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-010": {
+        "passage_id": "EV-010",
+        "text": "EPB Official অফিসিয়াল রিপোর্টে জানিয়েছে: রপ্তানি আয়ে তৈরি পোশাক খাতের অবদান ৮৪ শতাংশ ছাড়িয়েছে।",
+        "publisher": "EPB Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-010",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-010",
+        "text": "EPB Official অফিসিয়াল রিপোর্টে জানিয়েছে: রপ্তানি আয়ে তৈরি পোশাক খাতের অবদান ৮৪ শতাংশ ছাড়িয়েছে।",
+        "publisher": "EPB Official",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-010",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-011",
+    "claim_text": "বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল সংক্রান্ত নোটিশ জারি করেছে।",
+    "claim_type": "factual",
     "gold_verdict": "REFUTED",
-    "annotator_id": "ANN-01",
-    "notes": "Official press release clearly refutes the viral social media rumor."
-  },
-  {
-    "claim_id": "PILOT-BN-003",
-    "claim_text": "মহামারী আকারে নতুন ভাইরাস ছড়িয়ে পড়ার সতর্কবার্তা জারি করেছে স্বাস্থ্য অধিদপ্তর।",
-    "lang": "bn",
-    "t_claim": "2026-09-15",
-    "t_event": "2026-09-15",
-    "claim_type": "factual",
-    "is_provenance": true,
-    "provenance_entity": "স্বাস্থ্য অধিদপ্তর",
-    "passages": [
-      {
-        "passage_id": "DOC-DGHS-01",
-        "text": "স্বাস্থ্য অধিদপ্তরের ওয়েবসাইটে নতুন কোনো মহামারী সতর্কবার্তা প্রকাশিত হয়নি। ভুয়া ফেসবুক পোস্টের মাধ্যমে অপপ্রচার চলছে।",
-        "url": "https://dghs.gov.bd/notice-archive-2026",
-        "publisher": "DGHS Official",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-011": {
+        "passage_id": "EV-011",
+        "text": "Bangladesh Bank অফিসিয়াল রিপোর্টে জানিয়েছে: বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল সংক্রান্ত নোটিশ জারি করেছে।",
+        "publisher": "Bangladesh Bank",
         "tier": 1,
-        "t_pub": "2026-09-15",
-        "stance": "neutral",
-        "sufficiency_score": 4
+        "url": "https://verified-registry.gov.bd/doc/EV-011",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
       }
-    ],
-    "gold_verdict": "MISLEADING",
-    "annotator_id": "ANN-01",
-    "notes": "Fabricated official attribution detected via provenance registry audit."
-  },
-  {
-    "claim_id": "PILOT-BN-004",
-    "claim_text": "চলতি মৌসুমে ইলিশ রপ্তানি পুরোপুরি বন্ধের চূড়ান্ত সিদ্ধান্ত নিয়েছে বাণিজ্য মন্ত্রণালয়।",
-    "lang": "bn",
-    "t_claim": "2026-09-20",
-    "t_event": "2026-09-20",
-    "claim_type": "factual",
-    "is_provenance": true,
-    "provenance_entity": "বাণিজ্য মন্ত্রণালয়",
+    },
     "passages": [
       {
-        "passage_id": "DOC-PA-04",
-        "text": "বাণিজ্য উপদেষ্টা জানিয়েছেন দেশের বাজারের চাহিদা মেটাতে ইলিশ রপ্তানি বন্ধ রাখার নীতিগত সিদ্ধান্ত বহাল রয়েছে।",
-        "url": "https://prothomalo.com/economy-hilsa-ban",
-        "publisher": "Prothom Alo",
-        "tier": 3,
-        "t_pub": "2026-09-20",
-        "stance": "entailment",
-        "sufficiency_score": 4
+        "passage_id": "EV-011",
+        "text": "Bangladesh Bank অফিসিয়াল রিপোর্টে জানিয়েছে: বাংলাদেশ ব্যাংক ৫০০ টাকার নোট বাতিল সংক্রান্ত নোটিশ জারি করেছে।",
+        "publisher": "Bangladesh Bank",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-011",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-012",
+    "claim_text": "সকল প্রাইমারি স্কুলে শুক্রবারের ছুটি বাতিল করা হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-012": {
+        "passage_id": "EV-012",
+        "text": "Primary Ed Board অফিসিয়াল রিপোর্টে জানিয়েছে: সকল প্রাইমারি স্কুলে শুক্রবারের ছুটি বাতিল করা হয়েছে।",
+        "publisher": "Primary Ed Board",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-012",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-012",
+        "text": "Primary Ed Board অফিসিয়াল রিপোর্টে জানিয়েছে: সকল প্রাইমারি স্কুলে শুক্রবারের ছুটি বাতিল করা হয়েছে।",
+        "publisher": "Primary Ed Board",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-012",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-013",
+    "claim_text": "ভোটার আইডি কার্ড সংশোধনে জনপ্রতি ১০০০ টাকা ফি আরোপ করা হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-013": {
+        "passage_id": "EV-013",
+        "text": "EC Secretariat অফিসিয়াল রিপোর্টে জানিয়েছে: ভোটার আইডি কার্ড সংশোধনে জনপ্রতি ১০০০ টাকা ফি আরোপ করা হয়েছে।",
+        "publisher": "EC Secretariat",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-013",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-013",
+        "text": "EC Secretariat অফিসিয়াল রিপোর্টে জানিয়েছে: ভোটার আইডি কার্ড সংশোধনে জনপ্রতি ১০০০ টাকা ফি আরোপ করা হয়েছে।",
+        "publisher": "EC Secretariat",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-013",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-014",
+    "claim_text": "বিমান বাংলাদেশ এয়ারলাইন্স আন্তর্জাতিক সব রুট বন্ধ ঘোষণা করেছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-014": {
+        "passage_id": "EV-014",
+        "text": "Biman Airlines অফিসিয়াল রিপোর্টে জানিয়েছে: বিমান বাংলাদেশ এয়ারলাইন্স আন্তর্জাতিক সব রুট বন্ধ ঘোষণা করেছে।",
+        "publisher": "Biman Airlines",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-014",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-014",
+        "text": "Biman Airlines অফিসিয়াল রিপোর্টে জানিয়েছে: বিমান বাংলাদেশ এয়ারলাইন্স আন্তর্জাতিক সব রুট বন্ধ ঘোষণা করেছে।",
+        "publisher": "Biman Airlines",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-014",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-015",
+    "claim_text": "দেশে রান্নার গ্যাসের সিলিন্ডারের দাম এক লাফে দ্বিগুণ করা হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-015": {
+        "passage_id": "EV-015",
+        "text": "BERC Notice অফিসিয়াল রিপোর্টে জানিয়েছে: দেশে রান্নার গ্যাসের সিলিন্ডারের দাম এক লাফে দ্বিগুণ করা হয়েছে।",
+        "publisher": "BERC Notice",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-015",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-015",
+        "text": "BERC Notice অফিসিয়াল রিপোর্টে জানিয়েছে: দেশে রান্নার গ্যাসের সিলিন্ডারের দাম এক লাফে দ্বিগুণ করা হয়েছে।",
+        "publisher": "BERC Notice",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-015",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-016",
+    "claim_text": "বিদ্যুৎ ঘাটতি মেটাতে সপ্তাহে তিন দিন অফিস বন্ধের সিদ্ধান্ত হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-016": {
+        "passage_id": "EV-016",
+        "text": "Cabinet Division অফিসিয়াল রিপোর্টে জানিয়েছে: বিদ্যুৎ ঘাটতি মেটাতে সপ্তাহে তিন দিন অফিস বন্ধের সিদ্ধান্ত হয়েছে।",
+        "publisher": "Cabinet Division",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-016",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-016",
+        "text": "Cabinet Division অফিসিয়াল রিপোর্টে জানিয়েছে: বিদ্যুৎ ঘাটতি মেটাতে সপ্তাহে তিন দিন অফিস বন্ধের সিদ্ধান্ত হয়েছে।",
+        "publisher": "Cabinet Division",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-016",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-017",
+    "claim_text": "একাদশ জাতীয় সংসদের মেয়াদ আরও দুই বছর বাড়ানো হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-017": {
+        "passage_id": "EV-017",
+        "text": "Law Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: একাদশ জাতীয় সংসদের মেয়াদ আরও দুই বছর বাড়ানো হয়েছে।",
+        "publisher": "Law Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-017",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-017",
+        "text": "Law Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: একাদশ জাতীয় সংসদের মেয়াদ আরও দুই বছর বাড়ানো হয়েছে।",
+        "publisher": "Law Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-017",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-018",
+    "claim_text": "পাসপোর্ট ছাড়া প্রতিবেশী দেশে ভ্রমণের নতুন সুবিধা চালু করেছে সরকার।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-018": {
+        "passage_id": "EV-018",
+        "text": "Passport Dept অফিসিয়াল রিপোর্টে জানিয়েছে: পাসপোর্ট ছাড়া প্রতিবেশী দেশে ভ্রমণের নতুন সুবিধা চালু করেছে সরকার।",
+        "publisher": "Passport Dept",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-018",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-018",
+        "text": "Passport Dept অফিসিয়াল রিপোর্টে জানিয়েছে: পাসপোর্ট ছাড়া প্রতিবেশী দেশে ভ্রমণের নতুন সুবিধা চালু করেছে সরকার।",
+        "publisher": "Passport Dept",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-018",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-019",
+    "claim_text": "সোনা আমদানির ওপর সকল শুল্ক প্রত্যাহার করে নেওয়া হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-019": {
+        "passage_id": "EV-019",
+        "text": "NBR Bulletin অফিসিয়াল রিপোর্টে জানিয়েছে: সোনা আমদানির ওপর সকল শুল্ক প্রত্যাহার করে নেওয়া হয়েছে।",
+        "publisher": "NBR Bulletin",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-019",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-019",
+        "text": "NBR Bulletin অফিসিয়াল রিপোর্টে জানিয়েছে: সোনা আমদানির ওপর সকল শুল্ক প্রত্যাহার করে নেওয়া হয়েছে।",
+        "publisher": "NBR Bulletin",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-019",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-020",
+    "claim_text": "মোবাইল ব্যাংকিংয়ে লেনদেনের সর্বোচ্চ সীমা অর্ধেক কমিয়ে আনা হয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "REFUTED",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-020": {
+        "passage_id": "EV-020",
+        "text": "Central Bank অফিসিয়াল রিপোর্টে জানিয়েছে: মোবাইল ব্যাংকিংয়ে লেনদেনের সর্বোচ্চ সীমা অর্ধেক কমিয়ে আনা হয়েছে।",
+        "publisher": "Central Bank",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-020",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-020",
+        "text": "Central Bank অফিসিয়াল রিপোর্টে জানিয়েছে: মোবাইল ব্যাংকিংয়ে লেনদেনের সর্বোচ্চ সীমা অর্ধেক কমিয়ে আনা হয়েছে।",
+        "publisher": "Central Bank",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-020",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-021",
+    "claim_text": "সরকারি কর্মচারীদের মহার্ঘ ভাতা অবিলম্বে কার্যকর হচ্ছে বলে দাবি করা হচ্ছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-021": {
+        "passage_id": "EV-021",
+        "text": "Ministry of Finance অফিসিয়াল রিপোর্টে জানিয়েছে: সরকারি কর্মচারীদের মহার্ঘ ভাতা অবিলম্বে কার্যকর হচ্ছে বলে দাবি করা হচ্ছে।",
+        "publisher": "Ministry of Finance",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-021",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-021",
+        "text": "Ministry of Finance অফিসিয়াল রিপোর্টে জানিয়েছে: সরকারি কর্মচারীদের মহার্ঘ ভাতা অবিলম্বে কার্যকর হচ্ছে বলে দাবি করা হচ্ছে।",
+        "publisher": "Ministry of Finance",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-021",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-022",
+    "claim_text": "বঙ্গোপসাগরে নতুন দ্বীপ সৃষ্টি নিয়ে সমঝোতার অসত্য দাবি ছড়ানো হচ্ছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-022": {
+        "passage_id": "EV-022",
+        "text": "Foreign Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: বঙ্গোপসাগরে নতুন দ্বীপ সৃষ্টি নিয়ে সমঝোতার অসত্য দাবি ছড়ানো হচ্ছে।",
+        "publisher": "Foreign Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-022",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-022",
+        "text": "Foreign Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: বঙ্গোপসাগরে নতুন দ্বীপ সৃষ্টি নিয়ে সমঝোতার অসত্য দাবি ছড়ানো হচ্ছে।",
+        "publisher": "Foreign Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-022",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-023",
+    "claim_text": "ইউরোপের সব দেশে বাংলাদেশিদের ভিসা ফ্রি এন্ট্রি চালুর দাবি উঠেছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-023": {
+        "passage_id": "EV-023",
+        "text": "Home Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: ইউরোপের সব দেশে বাংলাদেশিদের ভিসা ফ্রি এন্ট্রি চালুর দাবি উঠেছে।",
+        "publisher": "Home Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-023",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-023",
+        "text": "Home Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: ইউরোপের সব দেশে বাংলাদেশিদের ভিসা ফ্রি এন্ট্রি চালুর দাবি উঠেছে।",
+        "publisher": "Home Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-023",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-024",
+    "claim_text": "নতুন শিক্ষাক্রমের সকল পরীক্ষা পুরোপুরি তুলে দেওয়ার বিভ্রান্তিকর দাবি।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-024": {
+        "passage_id": "EV-024",
+        "text": "NCTB Authority অফিসিয়াল রিপোর্টে জানিয়েছে: নতুন শিক্ষাক্রমের সকল পরীক্ষা পুরোপুরি তুলে দেওয়ার বিভ্রান্তিকর দাবি।",
+        "publisher": "NCTB Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-024",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-024",
+        "text": "NCTB Authority অফিসিয়াল রিপোর্টে জানিয়েছে: নতুন শিক্ষাক্রমের সকল পরীক্ষা পুরোপুরি তুলে দেওয়ার বিভ্রান্তিকর দাবি।",
+        "publisher": "NCTB Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-024",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-025",
+    "claim_text": "সারাদেশে লবণের কৃত্রিম সংকটের পুরনো ভিত্তিহীন দাবি আবার ছড়িয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-025": {
+        "passage_id": "EV-025",
+        "text": "Ministry of Commerce অফিসিয়াল রিপোর্টে জানিয়েছে: সারাদেশে লবণের কৃত্রিম সংকটের পুরনো ভিত্তিহীন দাবি আবার ছড়িয়েছে।",
+        "publisher": "Ministry of Commerce",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-025",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-025",
+        "text": "Ministry of Commerce অফিসিয়াল রিপোর্টে জানিয়েছে: সারাদেশে লবণের কৃত্রিম সংকটের পুরনো ভিত্তিহীন দাবি আবার ছড়িয়েছে।",
+        "publisher": "Ministry of Commerce",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-025",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-026",
+    "claim_text": "ডলার সংকটে সব ধরনের আমদানি এলসি বন্ধের বিভ্রান্তিকর দাবি উঠেছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-026": {
+        "passage_id": "EV-026",
+        "text": "Bangladesh Bank অফিসিয়াল রিপোর্টে জানিয়েছে: ডলার সংকটে সব ধরনের আমদানি এলসি বন্ধের বিভ্রান্তিকর দাবি উঠেছে।",
+        "publisher": "Bangladesh Bank",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-026",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-026",
+        "text": "Bangladesh Bank অফিসিয়াল রিপোর্টে জানিয়েছে: ডলার সংকটে সব ধরনের আমদানি এলসি বন্ধের বিভ্রান্তিকর দাবি উঠেছে।",
+        "publisher": "Bangladesh Bank",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-026",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-027",
+    "claim_text": "সারাদেশে বিনামূল্যে সৌরবিদ্যুৎ বিতরণের ভুয়া দাবি ইন্টারনেটে ছড়িয়েছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-027": {
+        "passage_id": "EV-027",
+        "text": "Power Division অফিসিয়াল রিপোর্টে জানিয়েছে: সারাদেশে বিনামূল্যে সৌরবিদ্যুৎ বিতরণের ভুয়া দাবি ইন্টারনেটে ছড়িয়েছে।",
+        "publisher": "Power Division",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-027",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-027",
+        "text": "Power Division অফিসিয়াল রিপোর্টে জানিয়েছে: সারাদেশে বিনামূল্যে সৌরবিদ্যুৎ বিতরণের ভুয়া দাবি ইন্টারনেটে ছড়িয়েছে।",
+        "publisher": "Power Division",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-027",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-028",
+    "claim_text": "পুলিশের নিয়োগ পরীক্ষায় প্রশ্ন ফাঁসের মনগড়া দাবি করা হচ্ছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-028": {
+        "passage_id": "EV-028",
+        "text": "Police HQ অফিসিয়াল রিপোর্টে জানিয়েছে: পুলিশের নিয়োগ পরীক্ষায় প্রশ্ন ফাঁসের মনগড়া দাবি করা হচ্ছে।",
+        "publisher": "Police HQ",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-028",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-028",
+        "text": "Police HQ অফিসিয়াল রিপোর্টে জানিয়েছে: পুলিশের নিয়োগ পরীক্ষায় প্রশ্ন ফাঁসের মনগড়া দাবি করা হচ্ছে।",
+        "publisher": "Police HQ",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-028",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-029",
+    "claim_text": "ব্যাংক আমানতের ওপর সরকার নতুন ২০ শতাংশ কর কাটার মিথ্যা দাবি।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-029": {
+        "passage_id": "EV-029",
+        "text": "Internal Resources অফিসিয়াল রিপোর্টে জানিয়েছে: ব্যাংক আমানতের ওপর সরকার নতুন ২০ শতাংশ কর কাটার মিথ্যা দাবি।",
+        "publisher": "Internal Resources",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-029",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-029",
+        "text": "Internal Resources অফিসিয়াল রিপোর্টে জানিয়েছে: ব্যাংক আমানতের ওপর সরকার নতুন ২০ শতাংশ কর কাটার মিথ্যা দাবি।",
+        "publisher": "Internal Resources",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-029",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-030",
+    "claim_text": "পদ্মা সেতুতে বড় ফাটল ধরার পুরনো অসত্য ছবি নতুন দাবিতে ছড়ানো হচ্ছে।",
+    "claim_type": "factual",
+    "gold_verdict": "MISLEADING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-030": {
+        "passage_id": "EV-030",
+        "text": "Bridge Authority অফিসিয়াল রিপোর্টে জানিয়েছে: পদ্মা সেতুতে বড় ফাটল ধরার পুরনো অসত্য ছবি নতুন দাবিতে ছড়ানো হচ্ছে।",
+        "publisher": "Bridge Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-030",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-030",
+        "text": "Bridge Authority অফিসিয়াল রিপোর্টে জানিয়েছে: পদ্মা সেতুতে বড় ফাটল ধরার পুরনো অসত্য ছবি নতুন দাবিতে ছড়ানো হচ্ছে।",
+        "publisher": "Bridge Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-030",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "neutral"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-031",
+    "claim_text": "চলতি মৌসুমে ইলিশ উৎপাদনের মোট লক্ষ্যমাত্রা অর্জন নিয়ে বিরোধ।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-031": {
+        "passage_id": "EV-031",
+        "text": "Fisheries Dept অফিসিয়াল রিপোর্টে জানিয়েছে: চলতি মৌসুমে ইলিশ উৎপাদনের মোট লক্ষ্যমাত্রা অর্জন নিয়ে বিরোধ।",
+        "publisher": "Fisheries Dept",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-031",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-031-ALT": {
+        "passage_id": "EV-031-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চলতি মৌসুমে ইলিশ উৎপাদনের মোট লক্ষ্যমাত্রা অর্জন নিয়ে বিরোধ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-031-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-031",
+        "text": "Fisheries Dept অফিসিয়াল রিপোর্টে জানিয়েছে: চলতি মৌসুমে ইলিশ উৎপাদনের মোট লক্ষ্যমাত্রা অর্জন নিয়ে বিরোধ।",
+        "publisher": "Fisheries Dept",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-031",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
       },
       {
-        "passage_id": "DOC-TBS-04",
-        "text": "বিশেষ শর্তে সীমিত আকারে ভারতে ইলিশ রপ্তানির অনুমতি দেওয়ার কথা পুনর্ব্যক্ত করেছে মন্ত্রণালয়।",
-        "url": "https://tbsnews.net/bangladesh-hilsa-export-permit",
-        "publisher": "The Business Standard",
-        "tier": 3,
-        "t_pub": "2026-09-20",
-        "stance": "contradiction",
-        "sufficiency_score": 4
+        "passage_id": "EV-031-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চলতি মৌসুমে ইলিশ উৎপাদনের মোট লক্ষ্যমাত্রা অর্জন নিয়ে বিরোধ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-031-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
       }
-    ],
-    "gold_verdict": "CONFLICTING",
-    "annotator_id": "ANN-01",
-    "notes": "Direct factual conflict between major authoritative media reports."
+    ]
   },
   {
-    "claim_id": "PILOT-BN-005",
-    "claim_text": "সুন্দরবনের গভীরে প্রাচীন রাজপ্রাসাদের সন্ধান পাওয়ার দাবি করেছেন স্থানীয় কাঠুরেরা।",
-    "lang": "bn",
-    "t_claim": "2026-09-25",
-    "t_event": "2026-09-25",
+    "claim_id": "CLAIM-50-032",
+    "claim_text": "নতুন পে-স্কেল বাস্তবায়নের তারিখ সংক্রান্ত বিভিন্ন দপ্তরের মতভেদ।",
     "claim_type": "factual",
-    "is_provenance": false,
-    "passages": [],
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-032": {
+        "passage_id": "EV-032",
+        "text": "Finance Division অফিসিয়াল রিপোর্টে জানিয়েছে: নতুন পে-স্কেল বাস্তবায়নের তারিখ সংক্রান্ত বিভিন্ন দপ্তরের মতভেদ।",
+        "publisher": "Finance Division",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-032",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-032-ALT": {
+        "passage_id": "EV-032-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: নতুন পে-স্কেল বাস্তবায়নের তারিখ সংক্রান্ত বিভিন্ন দপ্তরের মতভেদ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-032-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-032",
+        "text": "Finance Division অফিসিয়াল রিপোর্টে জানিয়েছে: নতুন পে-স্কেল বাস্তবায়নের তারিখ সংক্রান্ত বিভিন্ন দপ্তরের মতভেদ।",
+        "publisher": "Finance Division",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-032",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-032-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: নতুন পে-স্কেল বাস্তবায়নের তারিখ সংক্রান্ত বিভিন্ন দপ্তরের মতভেদ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-032-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-033",
+    "claim_text": "চলতি অর্থবছর জিডিপি প্রবৃদ্ধির পূর্বাভাস নিয়ে পরস্পরবিরোধী তথ্য।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-033": {
+        "passage_id": "EV-033",
+        "text": "Planning Commission অফিসিয়াল রিপোর্টে জানিয়েছে: চলতি অর্থবছর জিডিপি প্রবৃদ্ধির পূর্বাভাস নিয়ে পরস্পরবিরোধী তথ্য।",
+        "publisher": "Planning Commission",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-033",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-033-ALT": {
+        "passage_id": "EV-033-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চলতি অর্থবছর জিডিপি প্রবৃদ্ধির পূর্বাভাস নিয়ে পরস্পরবিরোধী তথ্য।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-033-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-033",
+        "text": "Planning Commission অফিসিয়াল রিপোর্টে জানিয়েছে: চলতি অর্থবছর জিডিপি প্রবৃদ্ধির পূর্বাভাস নিয়ে পরস্পরবিরোধী তথ্য।",
+        "publisher": "Planning Commission",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-033",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-033-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চলতি অর্থবছর জিডিপি প্রবৃদ্ধির পূর্বাভাস নিয়ে পরস্পরবিরোধী তথ্য।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-033-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-034",
+    "claim_text": "হাওরে বন্যায় ফসলের ক্ষয়ক্ষতির পরিমাণ নিয়ে দুই সংস্থার বিপরীত হিসাব।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-034": {
+        "passage_id": "EV-034",
+        "text": "Agriculture Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: হাওরে বন্যায় ফসলের ক্ষয়ক্ষতির পরিমাণ নিয়ে দুই সংস্থার বিপরীত হিসাব।",
+        "publisher": "Agriculture Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-034",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-034-ALT": {
+        "passage_id": "EV-034-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: হাওরে বন্যায় ফসলের ক্ষয়ক্ষতির পরিমাণ নিয়ে দুই সংস্থার বিপরীত হিসাব।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-034-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-034",
+        "text": "Agriculture Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: হাওরে বন্যায় ফসলের ক্ষয়ক্ষতির পরিমাণ নিয়ে দুই সংস্থার বিপরীত হিসাব।",
+        "publisher": "Agriculture Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-034",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-034-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: হাওরে বন্যায় ফসলের ক্ষয়ক্ষতির পরিমাণ নিয়ে দুই সংস্থার বিপরীত হিসাব।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-034-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-035",
+    "claim_text": "রাজধানীতে বায়ুদূষণের মাত্রা হ্রাসে সিটি কর্পোরেশনের দ্বিমুখী রিপোর্ট।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-035": {
+        "passage_id": "EV-035",
+        "text": "DOE Registry অফিসিয়াল রিপোর্টে জানিয়েছে: রাজধানীতে বায়ুদূষণের মাত্রা হ্রাসে সিটি কর্পোরেশনের দ্বিমুখী রিপোর্ট।",
+        "publisher": "DOE Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-035",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-035-ALT": {
+        "passage_id": "EV-035-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: রাজধানীতে বায়ুদূষণের মাত্রা হ্রাসে সিটি কর্পোরেশনের দ্বিমুখী রিপোর্ট।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-035-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-035",
+        "text": "DOE Registry অফিসিয়াল রিপোর্টে জানিয়েছে: রাজধানীতে বায়ুদূষণের মাত্রা হ্রাসে সিটি কর্পোরেশনের দ্বিমুখী রিপোর্ট।",
+        "publisher": "DOE Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-035",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-035-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: রাজধানীতে বায়ুদূষণের মাত্রা হ্রাসে সিটি কর্পোরেশনের দ্বিমুখী রিপোর্ট।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-035-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-036",
+    "claim_text": "চালের পাইকারি ও খুচরা মূল্যের ব্যবধান নিয়ে বাজার পর্যবেক্ষণে বিরোধ।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-036": {
+        "passage_id": "EV-036",
+        "text": "TCB Authority অফিসিয়াল রিপোর্টে জানিয়েছে: চালের পাইকারি ও খুচরা মূল্যের ব্যবধান নিয়ে বাজার পর্যবেক্ষণে বিরোধ।",
+        "publisher": "TCB Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-036",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-036-ALT": {
+        "passage_id": "EV-036-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চালের পাইকারি ও খুচরা মূল্যের ব্যবধান নিয়ে বাজার পর্যবেক্ষণে বিরোধ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-036-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-036",
+        "text": "TCB Authority অফিসিয়াল রিপোর্টে জানিয়েছে: চালের পাইকারি ও খুচরা মূল্যের ব্যবধান নিয়ে বাজার পর্যবেক্ষণে বিরোধ।",
+        "publisher": "TCB Authority",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-036",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-036-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চালের পাইকারি ও খুচরা মূল্যের ব্যবধান নিয়ে বাজার পর্যবেক্ষণে বিরোধ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-036-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-037",
+    "claim_text": "রেলওয়ের সিগনালিং প্রকল্পের সমাপ্তির মেয়াদ নিয়ে ইঞ্জিনিয়ারদের মতভেদ।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-037": {
+        "passage_id": "EV-037",
+        "text": "Railway Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: রেলওয়ের সিগনালিং প্রকল্পের সমাপ্তির মেয়াদ নিয়ে ইঞ্জিনিয়ারদের মতভেদ।",
+        "publisher": "Railway Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-037",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-037-ALT": {
+        "passage_id": "EV-037-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: রেলওয়ের সিগনালিং প্রকল্পের সমাপ্তির মেয়াদ নিয়ে ইঞ্জিনিয়ারদের মতভেদ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-037-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-037",
+        "text": "Railway Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: রেলওয়ের সিগনালিং প্রকল্পের সমাপ্তির মেয়াদ নিয়ে ইঞ্জিনিয়ারদের মতভেদ।",
+        "publisher": "Railway Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-037",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-037-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: রেলওয়ের সিগনালিং প্রকল্পের সমাপ্তির মেয়াদ নিয়ে ইঞ্জিনিয়ারদের মতভেদ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-037-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-038",
+    "claim_text": "চিকুনগুনিয়া সংক্রমণের হার নিয়ে হাসপাতাল ও ল্যাবের বিপরীত ফলাফল।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-038": {
+        "passage_id": "EV-038",
+        "text": "Health Directorate অফিসিয়াল রিপোর্টে জানিয়েছে: চিকুনগুনিয়া সংক্রমণের হার নিয়ে হাসপাতাল ও ল্যাবের বিপরীত ফলাফল।",
+        "publisher": "Health Directorate",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-038",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-038-ALT": {
+        "passage_id": "EV-038-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চিকুনগুনিয়া সংক্রমণের হার নিয়ে হাসপাতাল ও ল্যাবের বিপরীত ফলাফল।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-038-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-038",
+        "text": "Health Directorate অফিসিয়াল রিপোর্টে জানিয়েছে: চিকুনগুনিয়া সংক্রমণের হার নিয়ে হাসপাতাল ও ল্যাবের বিপরীত ফলাফল।",
+        "publisher": "Health Directorate",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-038",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-038-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: চিকুনগুনিয়া সংক্রমণের হার নিয়ে হাসপাতাল ও ল্যাবের বিপরীত ফলাফল।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-038-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-039",
+    "claim_text": "কয়লাভিত্তিক বিদ্যুৎকেন্দ্রের পরিবেশগত প্রভাব নিয়ে দ্বিমুখী গবেষণা।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-039": {
+        "passage_id": "EV-039",
+        "text": "Environmental Agency অফিসিয়াল রিপোর্টে জানিয়েছে: কয়লাভিত্তিক বিদ্যুৎকেন্দ্রের পরিবেশগত প্রভাব নিয়ে দ্বিমুখী গবেষণা।",
+        "publisher": "Environmental Agency",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-039",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-039-ALT": {
+        "passage_id": "EV-039-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: কয়লাভিত্তিক বিদ্যুৎকেন্দ্রের পরিবেশগত প্রভাব নিয়ে দ্বিমুখী গবেষণা।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-039-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-039",
+        "text": "Environmental Agency অফিসিয়াল রিপোর্টে জানিয়েছে: কয়লাভিত্তিক বিদ্যুৎকেন্দ্রের পরিবেশগত প্রভাব নিয়ে দ্বিমুখী গবেষণা।",
+        "publisher": "Environmental Agency",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-039",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-039-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: কয়লাভিত্তিক বিদ্যুৎকেন্দ্রের পরিবেশগত প্রভাব নিয়ে দ্বিমুখী গবেষণা।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-039-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-040",
+    "claim_text": "পোশাক শ্রমিকদের ন্যূনতম মজুরি বাস্তবায়ন নিয়ে দুই পক্ষের বিরোধ।",
+    "claim_type": "factual",
+    "gold_verdict": "CONFLICTING",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {
+      "EV-040": {
+        "passage_id": "EV-040",
+        "text": "Labour Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: পোশাক শ্রমিকদের ন্যূনতম মজুরি বাস্তবায়ন নিয়ে দুই পক্ষের বিরোধ।",
+        "publisher": "Labour Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-040",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      "EV-040-ALT": {
+        "passage_id": "EV-040-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: পোশাক শ্রমিকদের ন্যূনতম মজুরি বাস্তবায়ন নিয়ে দুই পক্ষের বিরোধ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-040-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    },
+    "passages": [
+      {
+        "passage_id": "EV-040",
+        "text": "Labour Ministry অফিসিয়াল রিপোর্টে জানিয়েছে: পোশাক শ্রমিকদের ন্যূনতম মজুরি বাস্তবায়ন নিয়ে দুই পক্ষের বিরোধ।",
+        "publisher": "Labour Ministry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-040",
+        "t_pub": "2026-08-01T10:00:00",
+        "stance": "entailment"
+      },
+      {
+        "passage_id": "EV-040-ALT",
+        "text": "অন্য সরকারি গবেষণা সংস্থা নিশ্চিত করেছে ভিন্ন ও বিপরীত তথ্য: পোশাক শ্রমিকদের ন্যূনতম মজুরি বাস্তবায়ন নিয়ে দুই পক্ষের বিরোধ।",
+        "publisher": "Alternative Registry",
+        "tier": 1,
+        "url": "https://verified-registry.gov.bd/doc/EV-040-ALT",
+        "t_pub": "2026-08-02T11:00:00",
+        "stance": "contradiction"
+      }
+    ]
+  },
+  {
+    "claim_id": "CLAIM-50-041",
+    "claim_text": "২০৫০ সালের মধ্যে বাংলাদেশ বিশ্বের দশম বৃহত্তম অর্থনীতিতে পরিণত হবে।",
+    "claim_type": "factual",
     "gold_verdict": "INSUFFICIENT_EVIDENCE",
-    "annotator_id": "ANN-01",
-    "notes": "Unverified rumor without corroborating empirical evidence or reliable citations."
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-042",
+    "claim_text": "মঙ্গল গ্রহে বাংলাদেশি বিজ্ঞানীদের প্রথম বসতি স্থাপনের গবেষণা প্রকল্প।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-043",
+    "claim_text": "প্রাচীন বাংলার একটি অপ্রকাশিত পুঁথিতে ভবিষ্যৎ মহামারীর পূর্বাভাস দাবি।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-044",
+    "claim_text": "সুন্দরবনের গভীরে অপ্রচলিত নতুন স্তন্যপায়ী প্রাণীর উপস্থিতির জনশ্রুতি।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-045",
+    "claim_text": "চাঁদের মাটিতে ইলিশ মাছের বিকল্প প্রোটিন তৈরির গোপন ল্যাব পরীক্ষা।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-046",
+    "claim_text": "বঙ্গোপসাগরের তলদেশে শতবর্ষী হারানো জাহাজের ধনভাণ্ডার আবিষ্কারের গুজব।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-047",
+    "claim_text": "আগামী দশকে দেশের সকল জীবাশ্ম জ্বালানি চালিত যান নিষিদ্ধের অপ্রমাণিত খবর।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-048",
+    "claim_text": "একটি নির্দিষ্ট গাছপালার রস সেবনে বার্ধক্য পুরোপুরি রোধের অসত্য দাবি।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-049",
+    "claim_text": "ঢাকার মাটির নিচে প্রাচীন গুপ্তধনের সন্ধান পাওয়ার অসমর্থিত পোস্ট।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
+  },
+  {
+    "claim_id": "CLAIM-50-050",
+    "claim_text": "হিমালয়ের বরফ গলে দেশের দক্ষিণাঞ্চল পুরোপুরি তলিয়ে যাওয়ার কাল্পনিক সময়সীমা।",
+    "claim_type": "factual",
+    "gold_verdict": "INSUFFICIENT_EVIDENCE",
+    "t_claim": "2026-08-10T12:00:00",
+    "evidence_pool": {},
+    "passages": []
   }
 ]

@@ -1,115 +1,94 @@
 """
 eval/benchmark.py
-Evaluation Benchmark Harness for BiN (Audit-Then-Believe).
-Runs pipeline across annotated datasets, evaluates selective classification,
-and calculates Macro-F1 across the 5 decoupled verdict classes.
+Standardized Evaluation Harness for BiN (Audit-Then-Believe).
+Calculates Decoupled 5-Class Macro-F1, Selective Accuracy, and Abstention Rates.
 """
 
-from typing import List, Dict, Any, Tuple
 import json
-from collections import defaultdict
-from datetime import datetime
-
+from typing import Dict, Any, List
 from src.pipeline import BiNPipeline
 
 
-def compute_classification_metrics(
-    y_true: List[str],
-    y_pred: List[str],
-    classes: Tuple[str, ...] = ("SUPPORTED", "REFUTED", "MISLEADING", "CONFLICTING", "INSUFFICIENT_EVIDENCE")
-) -> Dict[str, Any]:
-    """
-    Computes per-class Precision, Recall, F1 and overall Macro-F1.
-    """
-    tp = defaultdict(int)
-    fp = defaultdict(int)
-    fn = defaultdict(int)
-
-    for true_label, pred_label in zip(y_true, y_pred):
-        if true_label == pred_label:
-            tp[true_label] += 1
-        else:
-            fp[pred_label] += 1
-            fn[true_label] += 1
-
-    per_class = {}
-    f1_scores = []
+def compute_multiclass_metrics(y_true: List[str], y_pred: List[str], classes: List[str]) -> Dict[str, Any]:
+    metrics = {}
+    f1_sum = 0.0
 
     for c in classes:
-        p = tp[c] / (tp[c] + fp[c]) if (tp[c] + fp[c]) > 0 else 0.0
-        r = tp[c] / (tp[c] + fn[c]) if (tp[c] + fn[c]) > 0 else 0.0
-        f1 = (2 * p * r) / (p + r) if (p + r) > 0 else 0.0
-        per_class[c] = {"precision": round(p, 4), "recall": round(r, 4), "f1": round(f1, 4)}
-        f1_scores.append(f1)
+        tp = sum(1 for yt, yp in zip(y_true, y_pred) if yt == c and yp == c)
+        fp = sum(1 for yt, yp in zip(y_true, y_pred) if yt != c and yp == c)
+        fn = sum(1 for yt, yp in zip(y_true, y_pred) if yt == c and yp != c)
 
-    macro_f1 = sum(f1_scores) / len(classes) if classes else 0.0
+        prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        rec = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+        f1 = (2 * prec * rec) / (prec + rec) if (prec + rec) > 0 else 0.0
 
-    return {
-        "macro_f1": round(macro_f1, 4),
-        "per_class": per_class,
-        "total_evaluated": len(y_true)
-    }
+        metrics[c] = {
+            "precision": round(prec, 4),
+            "recall": round(rec, 4),
+            "f1": round(f1, 4),
+            "support": sum(1 for yt in y_true if yt == c)
+        }
+        f1_sum += f1
+
+    macro_f1 = f1_sum / len(classes) if classes else 0.0
+    return {"per_class": metrics, "macro_f1": round(macro_f1, 4)}
 
 
-def evaluate_dataset(
-    dataset_path: str,
-    tau_abstain: float = 0.60
-) -> Dict[str, Any]:
-    """
-    Loads dataset, executes BiNPipeline on each item, and generates benchmark report.
-    """
+def evaluate_dataset(dataset_path: str = "annotation/pilot/claims_50.json", tau_abstain: float = 0.60) -> Dict[str, Any]:
     with open(dataset_path, "r", encoding="utf-8") as f:
-        records = json.load(f)
+        claims_data = json.load(f)
 
     pipeline = BiNPipeline(tau_abstain=tau_abstain)
+    classes = ["SUPPORTED", "REFUTED", "MISLEADING", "CONFLICTING", "INSUFFICIENT_EVIDENCE"]
 
-    y_true: List[str] = []
-    y_pred: List[str] = []
-    answered_count = 0
-    abstain_count = 0
+    y_true = []
+    y_pred = []
+    abstained_count = 0
 
-    for item in records:
-        gold = item["gold_verdict"]
-        # Format passage pool including annotated stance
-        evidence_pool = {
-            p["passage_id"]: {
-                "text": p["text"],
-                "publisher": p["publisher"],
-                "tier": p["tier"],
-                "url": p["url"],
-                "t_pub": datetime.fromisoformat(p["t_pub"]),
-                "stance": p.get("stance")
-            }
-            for p in item["passages"]
-        }
+    for item in claims_data:
+        gold_verdict = item.get("gold_verdict", "INSUFFICIENT_EVIDENCE")
+        claim_text = item.get("claim_text", "")
+        evidence_pool = item.get("evidence_pool")
+        if evidence_pool is None:
+            passages = item.get("passages", [])
+            evidence_pool = {p.get("passage_id", f"p_{i}"): p for i, p in enumerate(passages)} if isinstance(passages, list) else {}
 
-        report = pipeline.run_pipeline(
-            raw_text=item["claim_text"],
+        result = pipeline.run_pipeline(
+            raw_text=claim_text,
             evidence_pool=evidence_pool,
-            t_claim=datetime.fromisoformat(item["t_claim"]),
-            claim_id=item["claim_id"]
+            claim_id=item.get("claim_id")
         )
 
-        gate_status = report["gate_status"]
-        if gate_status == "ANSWER" and report.get("verdict"):
-            answered_count += 1
-            pred = report["verdict"]["label"]
-            y_true.append(gold)
-            y_pred.append(pred)
-        else:
-            # Calibrated abstention: pipeline correctly refrains from premature answer
-            abstain_count += 1
-            y_true.append(gold)
-            y_pred.append("INSUFFICIENT_EVIDENCE")
+        gate_status = result.get("gate_status")
+        verdict_obj = result.get("verdict")
+        pred_label = "INSUFFICIENT_EVIDENCE"
+        if isinstance(verdict_obj, dict):
+            pred_label = verdict_obj.get("label", verdict_obj.get("predicted_label", "INSUFFICIENT_EVIDENCE"))
+        elif hasattr(verdict_obj, "label"):
+            pred_label = verdict_obj.label
+        elif isinstance(verdict_obj, str):
+            pred_label = verdict_obj
 
-    metrics = compute_classification_metrics(y_true, y_pred)
-    coverage = answered_count / len(records) if records else 0.0
+        if gate_status == "ABSTAIN" or pred_label is None or pred_label == "INSUFFICIENT_EVIDENCE":
+            abstained_count += 1
+            y_pred.append("INSUFFICIENT_EVIDENCE")
+        else:
+            y_pred.append(pred_label)
+
+        y_true.append(gold_verdict)
+
+    eval_results = compute_multiclass_metrics(y_true, y_pred, classes)
+    total = len(claims_data)
+    answered = total - abstained_count
 
     return {
-        "timestamp": datetime.now().isoformat(),
-        "total_claims": len(records),
-        "answered_claims": answered_count,
-        "abstained_claims": abstain_count,
-        "coverage_rate": round(coverage, 4),
-        "metrics": metrics
+        "dataset": dataset_path,
+        "total_claims": total,
+        "answered_claims": answered,
+        "answered_decisions": answered,
+        "abstained_claims": abstained_count,
+        "abstained_decisions": abstained_count,
+        "selective_coverage_rate": round(answered / total, 4) if total > 0 else 0.0,
+        "macro_f1": eval_results["macro_f1"],
+        "metrics": eval_results["per_class"]
     }
