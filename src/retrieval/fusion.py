@@ -1,77 +1,66 @@
 """
 src/retrieval/fusion.py
-Stage 3: Hybrid Retrieval & Reciprocal Rank Fusion (RRF).
-Combines BM25 and Dense rankings, logging retrieval passes and fusion ranks into EvidenceItem.
+Stage 3: Evidence Ranking & Reciprocal Rank Fusion (RRF).
+Deterministic fusion of dense and sparse passage rankings.
 """
 
-from typing import List, Dict, Tuple, Optional
-from datetime import datetime
-from src.contracts import EvidenceItem, RetrievalPass
-
-RRF_K_DEFAULT = 60
-
-# Contrastive cues for Pass B balanced refutation queries
-CONTRASTIVE_TERMS_BN = ["গুজব", "ভুয়া", "বিভ্রান্তিকর", "সত্য নয়", "অস্বীকৃতি"]
+from typing import List, Dict, Any, Tuple
+from collections import defaultdict
+from src.contracts import EvidenceItem
 
 
-def build_contrastive_query(claim_text: str) -> str:
+def reciprocal_rank_fusion(
+    bm25_ranked: List[str],
+    dense_ranked: List[str],
+    rrf_k: int = 60
+) -> List[str]:
     """
-    Constructs a Pass B contrastive query to balance evidence discovery.
+    Computes reciprocal rank fusion scores across sparse and dense lists.
+    RRF_score(d) = sum(1 / (k + rank(d)))
     """
-    return f"{claim_text} {' '.join(CONTRASTIVE_TERMS_BN[:3])}"
+    scores: Dict[str, float] = defaultdict(float)
 
+    for rank, doc_id in enumerate(bm25_ranked, start=1):
+        scores[doc_id] += 1.0 / (rrf_k + rank)
 
-def compute_rrf_scores(
-    bm25_ranked_ids: List[str],
-    dense_ranked_ids: List[str],
-    rrf_k: int = RRF_K_DEFAULT
-) -> Dict[str, float]:
-    """
-    Computes reciprocal rank fusion scores across BM25 and Dense candidate lists.
-    RRF_score(d) = sum(1 / (k + rank_i(d)))
-    """
-    scores: Dict[str, float] = {}
+    for rank, doc_id in enumerate(dense_ranked, start=1):
+        scores[doc_id] += 1.0 / (rrf_k + rank)
 
-    for rank, doc_id in enumerate(bm25_ranked_ids, start=1):
-        scores[doc_id] = scores.get(doc_id, 0.0) + (1.0 / (rrf_k + rank))
-
-    for rank, doc_id in enumerate(dense_ranked_ids, start=1):
-        scores[doc_id] = scores.get(doc_id, 0.0) + (1.0 / (rrf_k + rank))
-
-    return scores
+    # Sort descending by fused RRF score
+    sorted_docs = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    return [doc_id for doc_id, score in sorted_docs]
 
 
 def fuse_and_rank_evidence(
-    raw_passages: Dict[str, Dict],
+    raw_passages: Dict[str, Dict[str, Any]],
     bm25_ids: List[str],
     dense_ids: List[str],
-    pass_type: RetrievalPass,
-    top_k: int = 5
+    pass_type: str = "pass_hybrid_fusion",
+    top_k: int = 5,
+    rrf_k: int = 60
 ) -> Tuple[EvidenceItem, ...]:
     """
-    Fuses rankings, assigns fusion ranks, and packages passages into immutable EvidenceItem contracts.
+    Fuses rankings and constructs verified EvidenceItem tuples.
     """
-    rrf_scores = compute_rrf_scores(bm25_ids, dense_ids)
-    sorted_ids = sorted(rrf_scores.keys(), key=lambda x: rrf_scores[x], reverse=True)[:top_k]
+    fused_order = reciprocal_rank_fusion(bm25_ids, dense_ids, rrf_k=rrf_k)
+    selected_ids = fused_order[:top_k]
 
-    fused_items: List[EvidenceItem] = []
-    for rank, pid in enumerate(sorted_ids, start=1):
-        item_data = raw_passages[pid]
-        fused_items.append(
-            EvidenceItem(
-                passage_id=pid,
-                text=item_data["text"],
-                url=item_data.get("url", ""),
-                publisher=item_data.get("publisher", "unknown"),
-                tier=item_data.get("tier", 4),
-                t_pub=item_data.get("t_pub", datetime.now()),
-                t_verif=item_data.get("t_verif", datetime.now()),
-                retriever="hybrid",
-                retrieval_pass=pass_type,
-                fusion_rank=rank,
-                eligibility_reason="passed_contemporaneous_filter",
-                cluster_id=item_data.get("cluster_id")
-            )
+    evidence_items = []
+    for rank, doc_id in enumerate(selected_ids, start=1):
+        p_data = raw_passages.get(doc_id, {})
+        item = EvidenceItem(
+            passage_id=doc_id,
+            text=p_data.get("text", ""),
+            url=p_data.get("url", f"https://archive.factcheck.org/doc/{doc_id}"),
+            publisher=p_data.get("publisher", "Unknown Source"),
+            tier=p_data.get("tier", 3),
+            t_pub=p_data.get("t_pub"),
+            t_verif=p_data.get("t_verif"),
+            retriever="hybrid_rrf",
+            retrieval_pass=pass_type,
+            fusion_rank=rank,
+            eligibility_reason="passed_rrf_cutoff"
         )
+        evidence_items.append(item)
 
-    return tuple(fused_items)
+    return tuple(evidence_items)
